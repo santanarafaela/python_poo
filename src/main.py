@@ -27,20 +27,24 @@ if __name__ == "__main__":
     nm_modelo = input('Digite o modelo do carro 1: ')
     nm_marca = input('Digite a marca do carro 1: ')
     nm_cor = input('Digite a cor do carro 1: ')
+    litros = float(input('Nível do tanque: '))
+    cm = float(input('Consumo médio: '))
 
-    carro1 = Carro(nm_modelo, nm_marca, nm_cor, 0, False)
+    carro1 = Carro(nm_modelo, nm_marca, nm_cor, 0, False, litros, cm)
 
     nm_modelo = input('Digite o modelo do carro 2: ')
     nm_marca = input('Digite a marca do carro 2: ')
     nm_cor = input('Digite a cor do carro 2: ')
+    litros = float(input('Nível do tanque: '))
+    cm = float(input('Consumo médio: '))
 
 
-    carro2 = Carro(nm_modelo, nm_marca, nm_cor, 0, False)
+    carro2 = Carro(nm_modelo, nm_marca, nm_cor, 0, False, litros, cm)
 
     '''
     Controlando 2 carros até eles atingirem 600 Km
     '''
-    while carro1.odometro < 600 and carro2.odometro < 600:
+    while carro1.odometro < 600 and carro2.odometro < 600 and (carro1.tanque > 0 or carro2.tanque > 0):
         try:
             op = 0
             while op not in (1, 2):
