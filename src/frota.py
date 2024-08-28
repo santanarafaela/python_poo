@@ -43,6 +43,10 @@ class Carro:
         else:
             raise Exception("Erro: Motor já desligado!")
 
+    def get_odometro(self):
+        return self.__odometro
+
+
     def __str__(self):
         info = (f'Carro {self.modelo}, marca {self.marca}, '
                 f'cor {self.cor}\n{self.odometro} Km, '
